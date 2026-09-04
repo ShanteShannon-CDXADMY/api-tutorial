@@ -1,0 +1,13 @@
+.dog-gallery {
+  display: flex;
+  justify-content: center;   /* centers the row */
+  align-items: flex-start;    /* aligns the tops */
+  gap: 1rem;                  /* space between images */
+}
+
+.dog-gallery img {
+  width: 33%;                 /* each image takes 30% of the row */
+  border-radius: 8px;         /* optional */
+  object-fit: cover;          /* keeps proportions */
+  height:250px;
+}
