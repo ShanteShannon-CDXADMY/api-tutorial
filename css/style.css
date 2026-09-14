@@ -11,3 +11,13 @@
   object-fit: cover;          /* keeps proportions */
   height:250px;
 }
+.pic {
+height:450px;
+width:600px;
+display:block;
+margin:auto;
+margin-bottom:35px;
+}
+
+h2{
+text-align:center;}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-  <title>Dog CEO Api</title>
+  <title>Calling an Api</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.classless.min.css">
   <link rel="stylesheet" href="css/container.css">
   <link rel="stylesheet" href="css/card.css">
@@ -11,60 +11,59 @@
  <body>
   <main class="container">
 	<section class="card">
-	 <h1 class="hero"> How to Call the Dog CEO API </h1>
+	 <h1 class="hero"> How to Call an API </h1>
 	 <p class="hero">Send a request, read the JSON response, and explain what it means.</p>
 	</section>
+	
 	<section class="card">
-  <h2>Step 1 — The URL is the request</h2>
-  <img src="images/raw-json.png" alt="The dog.ceo response as one unbroken line of raw text">
-  <img src="images/pretty-json.png" alt="The same response laid out on separate lines by the browser's JSON viewer">
-  <p>I entered a call for the DOG CEO endpoint and was given the json response. I then formatted the response using pretty-json to make it readable. …</p>
-  
-  <pre><code>{
-  "message": "https://images.dog.ceo/breeds/hound-afghan/n02088094_2062.jpg",
-  "status": "success"
-}</code></pre>
-<a href="https://dog.ceo/dog-api/">Read the DOG CEO API documentation</a>
-</section>
-<section class="card">
-  <h2>Reflection Day 1</h2>
-  <p>
-    Today I learned how different an API response looks when it's raw versus pretty‑printed.
+	 <h2>Step 1 — The URL is the request</h2>
+     <img src="images/raw-json.png" alt="The dog.ceo response as one unbroken line of raw text">
+     <img src="images/pretty-json.png" alt="The same response laid out on separate lines by the browser's JSON viewer">
+     <p>I entered a call for the DOG CEO endpoint and was given the json response. I then formatted the response using pretty-json to make it readable. …</p>
+     <pre><code>{
+	  "message": "https://images.dog.ceo/breeds/hound-afghan/n02088094_2062.jpg",
+	  "status": "success"}
+	 </code></pre>
+	
+	 <a href="https://dog.ceo/dog-api/">Read the DOG CEO API documentation</a>
+	</section>
+	<section class="card">
+	 <h2>Reflection Day 1</h2>
+     <p>
+	Today I learned how to call an API and see the differences in the responses when it's raw versus pretty‑printed.
     In <code>raw.json</code>, everything is squeezed into one long line, so all the properties
     and values blur together. But when you pretty‑print the same JSON, the object gets spaced
     out and indented, which makes each property readable and way easier to understand.
-    Seeing that difference helped me understand why dot notation works — you're just picking
-    one property out of that big object.
-  </p>
-
-  <pre><code>{
-  "message": "https://images.dog.ceo/breeds/hound-afghan/n02088094_2062.jpg",
-  "status": "success"
-}</code></pre>
-</section>
-	 <section class="card">
+	</p>
+	<pre><code>{
+	 "message": "https://images.dog.ceo/breeds/hound-afghan/n02088094_2062.jpg",
+	 "status": "success"}
+	</code></pre>
+	</section>
+	 
+	<section class="card">
 	 <h2>Step 2- Request Three Hounds</h2>
-<div class="dog-gallery">
-  <img src="images/afghan.jpg" alt="Long Haired Afghan dog">
-  <img src="images/bassetHound.jpg" alt="Brown Bassset Hound">
-  <img src="images/englishHound.jpg" alt="brown and white English Hound"> 
-  </div>
-  <img src="images/screenshot.jpeg" alt="pretty json response">
-
-  <p>This message field contains a list of three images URLS.</p>
-  <pre><code>{
+	  <div class="dog-gallery">
+	   <img src="images/afghan.jpg" alt="Long Haired Afghan dog">
+	   <img src="images/bassetHound.jpg" alt="Brown Bassset Hound">
+	   <img src="images/englishHound.jpg" alt="brown and white English Hound"> 
+	  </div>
+	  <img src="images/screenshot.jpeg" alt="pretty json response">
+	 <p>This message field contains a list of three images URLS.</p>
+	 <pre><code>{
   
   "message": [
     "https://images.dog.ceo/breeds/hound-basset/n02088238_2009.jpg",
     "https://images.dog.ceo/breeds/hound-afghan/n02088094_2803.jpg",
     "https://images.dog.ceo/breeds/hound-english/n02089973_243.jpg"
   ],
-  "status": "success"
-}</code></pre></section>
-	 <section class="card">
-	 <h2>A menu that arrived already laid out</h2>
-  <img src="images/postman-coffee-menu.png" alt="Postman showing a GET to the coffee shop menu address with a 200 status and a response body that is already indented">
-  <p>I called the coffee menu endpoint and I saw an organized object with nested data, including an array inside the main object.</p>
+  "status": "success"}
+	</code></pre>
+  </section>
+  <section class="card">
+	 <h2>Step 3- A menu that arrived already laid out</h2>
+	 <img class="pic" src="images/postman-coffee-menu.png" alt="Postman showing a GET to the coffee shop menu address with a 200 status and a response body that is already indented">
+	 <p>I called the coffee menu endpoint and I saw an organized object with nested data, including an array inside the main object.</p>
   <pre><code>[
     {
         "name": "Espresso",
@@ -158,14 +157,49 @@
 
 ]</code></pre>
 	 </section>
-	 <section class="card">
-	 <h2>Keeping API Key secret</h2>
-	 <p>An api key must stay secret because it is like a personalized password assigned specifically to a person; having access to this code gives the user access to personal and valuable data.</p>
-	 <img src ="images/secret.png" alt="image of api key hidden">
-	 <img src= "images/hidden-api.png" alt="image of json with api as variable">
-
 	 
-	 </section>
+	 
+	 <section class="card">
+	 <h2>Day 2 Reflection</h2>
+	 <h3>Keeping API Key secret</h3>
+	 <p>An api key must stay secret because it is like a personalized password assigned specifically to a person; having access to this code gives the user access to personal and valuable data.</p>
+	 <img class="pic" src ="images/secret.png" alt="image of api key hidden">
+	 <p>The api key can be entered as a variable set to secret so that it stays hidden but can still be applied when the variable is called.</p>
+	 <img class="pic" src= "images/hidden-api.png" alt="image of json with api as variable">
+	</section>
+	<section class="card">
+	<h3>Changing Query Parameters</h3>
+	<p>Today I changed the query parameter name value to only get information about a specific dog name:"beagle".</p>
+	<img class="pic" src="images/query.png" alt="image of postman body with beagle information">
+	<pre><code>[
+    {
+        "image_link": "https://api-ninjas.com/images/dogs/beagle.jpg",
+        "good_with_children": 5,
+        "good_with_other_dogs": 5,
+        "shedding": 3,
+        "grooming": 2,
+        "drooling": 1,
+        "coat_length": 1,
+        "good_with_strangers": 3,
+        "playfulness": 4,
+        "protectiveness": 2,
+        "trainability": 3,
+        "energy": 4,
+        "barking": 4,
+        "min_life_expectancy": 10,
+        "max_life_expectancy": 15,
+        "max_height_male": 16,
+        "max_height_female": 15,
+        "max_weight_male": 20,
+        "max_weight_female": 30,
+        "min_height_male": 14,
+        "min_height_female": 13,
+        "min_weight_male": 15,
+        "min_weight_female": 20,
+        "name": "Beagle"
+    }
+]
+	</code></pre>
 	 </main>
  </body>
 </html>
