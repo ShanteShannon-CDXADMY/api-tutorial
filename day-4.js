@@ -1,4 +1,4 @@
-let pet = [
+let pets = [
   { name: "Abyssinian", origin: "Ethiopia", length: "12 to 16 inches", playfulness: 5, max_weight: 10 },
   { name: "Siamese", origin: "Thailand", length: "15 to 20 inches", playfulness: 5, max_weight: 12 },
   { name: "Maine Coon", origin: "United States", length: "30 to 40 inches", playfulness: 3, max_weight: 25 },
@@ -11,3 +11,16 @@ let pet = [
   { name: "Russian Blue", origin: "Russia", length: "15 to 18 inches", playfulness: 3, max_weight: 12 },
   {name: "Saffron", origin: "Turkey",  length: "15–18 inches",  playfulness: "high", max_weight: "12 pounds"}
 ];
+
+let button = document.getElementById("summarize-button");
+let output = document.getElementById("output");
+
+function summarize(pet) {
+  return pet.name + " comes from " + pet.origin + " and weighs up to " + pet.max_weight + " pounds.";
+}
+
+
+
+button.addEventListener("click", function () {
+  output.textContent = summarize(pets[1]);
+});

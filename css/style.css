@@ -21,3 +21,8 @@ margin-bottom:35px;
 
 h2{
 text-align:center;}
+
+#describe-button, #summarize-button {
+	display:block;
+margin:auto;
+margin-bottom: 25px;}

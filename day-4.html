@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Calling an Api</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.classless.min.css">
+  <link rel="stylesheet" href="css/container.css">
+  <link rel="stylesheet" href="css/card.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+  <a href="index.html">Back to the tutorial</a>
+  <h1>Day 4- One Function-Two Homes</h1>
+	  <button id="summarize-button" type="button">Summarize a cat</button>
+
+	<section class="card">
+	  <p id="output"></p>
+	</section>
+	<section class="card">
+	<h2>Console Log vs Return</h2>
+	<h3>Console Log</h3>
+	<p> When the function is called in the console.log, the return value is shown in the console in Dev Tools instead of the output.</p>
+	<img src="images/console.png" alt="image shows information in console log">
+	<pre><code>
+	 function summarize(pet) {
+     console.log (pet.name + " comes from " + pet.origin + " and weighs up to " + pet.max_weight + " pounds.");
+	}
+
+	</code></pre>
+	<h3>Return</h3>
+	<p>When a function calls for a return, the return value is given back in the output and is visiblly shown.</p>
+	 <img src="images/return.png" alt="image shows function when returned">
+	 <pre><code>
+	 function summarize(pet) {
+	 return pet.name + " comes from " + pet.origin + " and weighs up to " + pet.max_weight + " pounds.";
+     }
+	 </code></pre>
+	</section>
+	
+	<section class="card">
+	<h3>Global vs Local Variable Scope</h3>
+	<p>
+	A global variable like <code>pets</code> is available everywhere in the file, but a local variable inside <code>summarize()</code> only exists while the function is running. That’s why the page showed <code>undefined</code> when I tried to use a local line outside the function — the value wasn’t returned, so nothing came out of the function’s scope.
+   </p>
+ </section>
+  </main>
+  <script src="data.js"></script>
+  <script src="day-4.js"></script>
+
+</body>
+</html>
