@@ -23,12 +23,12 @@ h2{
 text-align:center;
 text-decoration:underline;}
 
-#describe-button, #summarize-button {
+#describe-button, #summarize-button, #report-button {
 	display:block;
 margin:auto;
 margin-bottom: 25px;}
 
-#page-button{
+#page-button {
 	display:block;
 	margin:auto;
 	height:50px;

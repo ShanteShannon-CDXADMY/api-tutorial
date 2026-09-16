@@ -1,13 +1,11 @@
-
-let button = document.getElementById("summarize-button");
-let output = document.getElementById("output");
+let button = document.getElementById("report-button");
+let report = document.getElementById("report");
 
 function summarize(pet) {
   return pet.name + " comes from " + pet.origin + " and weighs up to " + pet.max_weight + " pounds.";
 }
 
-
-
 button.addEventListener("click", function () {
-  output.textContent = summarize(pets[1]);
+  let lines = pets.map(summarize);
+  report.textContent = lines.join("\n");
 });

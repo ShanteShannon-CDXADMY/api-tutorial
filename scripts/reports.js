@@ -31,6 +31,11 @@ let third = scoreLine(playScore(pets[2]));
 let lines = pets.map(summarize);
 let report = lines.join("\n");
 
+let playful = pets.filter(function (pet) {
+  return pet.playfulness > 3;
+});
+let playfulLines = playful.map(summarize);
+let report2= playfulLines.join("\n");
 
 console.log(first);
 console.log(second);
@@ -38,3 +43,4 @@ console.log(third);
 console.log(playfulVerdict(pets[0]));
 console.log(playfulVerdict(pets[3]));
 console.log(report);
+console.log(report2);

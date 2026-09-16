@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Calling an Api</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.classless.min.css">
+  <link rel="stylesheet" href="css/container.css">
+  <link rel="stylesheet" href="css/card.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/style.css">
+ </head>
+</head>
+<body>
+	<main class="container">
+	<button class="page-button"><a href="index.html">Back to the tutorial</a></button>		
+		<h1>Day 5-Every Record-One Report</h1>
+		<button id="report-button" type="button">Show every cat</button>
+
+<section class="card">
+  <pre id="report"></pre>
+</section>
+
+<section class="card">
+	<h2>The Report</h2>
+	<p>This is the full report one line per cat.<pre><code>
+Abyssinian comes from Ethiopia.
+Siamese comes from Thailand.
+Maine Coon comes from United States.
+Persian comes from Iran.
+Ragdoll comes from United States.
+Sphynx comes from Canada.
+British Shorthair comes from United Kingdom.
+Bengal comes from United States.
+Scottish Fold comes from Scotland.
+Russian Blue comes from Russia.
+</code></pre></p>
+<p>These are the lines that created the report.
+	<pre><code> 
+	let lines = pets.map(summarize);
+	report.textContent = lines.join("\n");
+	</code></pre></p>
+</section>
+<section class="card">
+	<h2>forEach vs Map</h2>
+	<p> Today I learned that both <code>forEach</code> and <code>map</code> loops through an array and runs the function on each item; <code>forEach</code> does not collect or save the return value and <code>map</code> collects the return value from each call. <code>map</code> builds a new array of the return value and is used when new data is created. </p>
+<pre><code>// forEach: ignores return values
+pets.forEach(function (pet) {
+  return summarize(pet);   // thrown away
+});
+
+// map: collects return values
+let lines = pets.map(function (pet) {
+  return summarize(pet);   // saved in new array
+});
+</code></pre>
+</section>
+	</main>
+	<script src="data.js"></script>
+	<script src="day-5.js"></script>
+
+</body>
+</html>
