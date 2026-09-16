@@ -1,4 +1,4 @@
-let pet = [
+let pets = [
   { name: "Abyssinian", origin: "Ethiopia", length: "12 to 16 inches", playfulness: 5, max_weight: 10 },
   { name: "Siamese", origin: "Thailand", length: "15 to 20 inches", playfulness: 5, max_weight: 12 },
   { name: "Maine Coon", origin: "United States", length: "30 to 40 inches", playfulness: 3, max_weight: 25 },

@@ -20,9 +20,25 @@ margin-bottom:35px;
 }
 
 h2{
-text-align:center;}
+text-align:center;
+text-decoration:underline;}
 
 #describe-button, #summarize-button {
 	display:block;
 margin:auto;
 margin-bottom: 25px;}
+
+#page-button{
+	display:block;
+	margin:auto;
+	height:50px;
+	width:auto;
+	
+}
+
+a {
+color:white;
+}
+
+h3{
+text-align:center;}
